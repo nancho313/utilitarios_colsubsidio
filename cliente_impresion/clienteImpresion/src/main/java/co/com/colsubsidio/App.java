@@ -20,7 +20,7 @@ public class App
 
         request.setCodDetalleVenta(null);
 
-        request.setCodInfoVenta("GIR-10822");
+        request.setCodInfoVenta("BOG-14421372");
 
         request.setNumFactura(null);
 
@@ -74,7 +74,7 @@ public class App
 
     private static void imprimirArchivoPorBytes(byte[] data) throws IOException {
 
-        String filename = "/home/nancho/taquilla_prints/archivo_"+new Date().getTime()+".pdf";
+        String filename = "/home/nancho313/taquilla_prints/archivo_"+new Date().getTime()+".pdf";
 
         File file = new File(filename);
 

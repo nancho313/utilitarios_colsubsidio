@@ -25,7 +25,9 @@ public class LeerListaReportePiloto {
 
                 String[] infoSplit = linea.split(";");
 
-                ReportePiloto reportePiloto = new ReportePiloto(infoSplit[0], infoSplit[1]);
+                ReportePiloto reportePiloto = new ReportePiloto(infoSplit[0], infoSplit[1], infoSplit[2]);
+
+                reportePiloto.setTipoId(obtenerTipoDocumento(reportePiloto.getTipoId()));
 
                 registros.add(reportePiloto);
 
@@ -56,5 +58,59 @@ public class LeerListaReportePiloto {
         }
 
         return registros;
+    }
+
+    private String obtenerTipoDocumento(String type){
+
+        String resultado = "99";
+
+        switch (type){
+
+            case "1":
+                resultado = "CO1C";
+                break;
+
+            case "8":
+                resultado = "CO1D";
+                break;
+
+            case "4":
+                resultado = "CO1E";
+                break;
+
+            case "3":
+                resultado = "CO1L";
+                break;
+
+            case "7":
+                resultado = "CO1N";
+                break;
+
+            case "6":
+                resultado = "CO1P";
+                break;
+
+            case "96":
+                resultado = "CO1R";
+                break;
+
+            case "95":
+                resultado = "CO1S";
+                break;
+
+            case "2":
+                resultado = "CO1T";
+                break;
+
+            case "94":
+                resultado = "CO1V";
+                break;
+
+            case "93":
+                resultado = "CO1X";
+                break;
+        }
+
+        return resultado;
     }
 }

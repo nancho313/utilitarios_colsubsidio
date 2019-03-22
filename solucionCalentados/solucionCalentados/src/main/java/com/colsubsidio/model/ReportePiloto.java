@@ -8,9 +8,12 @@ public class ReportePiloto implements Serializable{
 
     private String numId;
 
-    public ReportePiloto(String idVenta, String numId) {
+    private String tipoId;
+
+    public ReportePiloto(String idVenta, String numId, String tipoId) {
         this.idVenta = idVenta;
         this.numId = numId;
+        this.tipoId = tipoId;
     }
 
     public String getIdVenta() {
@@ -29,11 +32,20 @@ public class ReportePiloto implements Serializable{
         this.numId = numId;
     }
 
+    public String getTipoId() {
+        return tipoId;
+    }
+
+    public void setTipoId(String tipoId) {
+        this.tipoId = tipoId;
+    }
+
     @Override
     public String toString() {
         return "ReportePiloto{" +
                 "idVenta='" + idVenta + '\'' +
                 ", numId='" + numId + '\'' +
+                ", tipoId='" + tipoId + '\'' +
                 '}';
     }
 }
